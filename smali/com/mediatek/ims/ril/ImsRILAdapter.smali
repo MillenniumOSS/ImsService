@@ -188,8 +188,6 @@
 
 .field mLastNITZTimeInfo:[Ljava/lang/Object;
 
-.field private mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
-
 .field public mModemIndication:Lcom/mediatek/ims/ril/ModemIndication;
 
 .field public mModemResponse:Lcom/mediatek/ims/ril/ModemResponse;
@@ -599,13 +597,6 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, v1, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMtkRadioVersion:Ljava/util/Map;
-
-    .line 434
-    invoke-static {}, Lcom/android/internal/telephony/metrics/TelephonyMetrics;->getInstance()Lcom/android/internal/telephony/metrics/TelephonyMetrics;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
 
     .line 441
     new-instance v0, Lcom/mediatek/ims/ril/ImsRILAdapter$DtmfQueueHandler;
@@ -1664,16 +1655,6 @@
     invoke-static {p0}, Lcom/mediatek/ims/ril/ImsRILAdapter;->getResponseForTimedOutRILRequest(Lcom/mediatek/ims/ril/RILRequest;)Ljava/lang/Object;
 
     move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$300(Lcom/mediatek/ims/ril/ImsRILAdapter;)Lcom/android/internal/telephony/metrics/TelephonyMetrics;
-    .locals 1
-    .param p0, "x0"    # Lcom/mediatek/ims/ril/ImsRILAdapter;
-
-    .line 319
-    iget-object v0, p0, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
 
     return-object v0
 .end method
