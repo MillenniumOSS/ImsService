@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call_notification_answer_action">(N)‏‮Answer‬‏</string>
+    <string name="call_notification_answer_video_action">(N)‏‮Video‬‏</string>
+    <string name="call_notification_decline_action">(N)‏‮Decline‬‏</string>
+    <string name="call_notification_hang_up_action">(N)‏‮Hang‬‏ ‏‮Up‬‏</string>
+    <string name="call_notification_incoming_text">(N)‏‮Incoming‬‏ ‏‮call‬‏</string>
+    <string name="call_notification_ongoing_text">(N)‏‮Ongoing‬‏ ‏‮call‬‏</string>
+    <string name="call_notification_screening_text">(N)‏‮Screening‬‏ ‏‮an‬‏ ‏‮incoming‬‏ ‏‮call‬‏</string>
+    <string name="status_bar_notification_info_overflow">(N)‏‮999+‬‏</string>
+</resources>
