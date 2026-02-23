@@ -55,7 +55,6 @@
         <uses-library android:name="com.mediatek.ims.oemplugin" android:required="false"/>
         <uses-library android:name="com.mediatek.ims.plugin" android:required="false"/>
         <uses-library android:name="mediatek-common" android:required="true"/>
-        <uses-library android:name="mediatek-framework" android:required="true"/>
         <uses-library android:name="mediatek-ims-base" android:required="true"/>
         <uses-library android:name="mediatek-ims-common" android:required="true"/>
         <uses-library android:name="mediatek-telephony-common" android:required="true"/>
