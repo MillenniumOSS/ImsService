@@ -54,7 +54,6 @@
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:directBootAware="true" android:extractNativeLibs="false" android:label="ImsApp" android:name="com.mediatek.ims.ImsApp" android:persistent="true" android:usesNonSdkApi="true">
         <uses-library android:name="com.mediatek.ims.oemplugin" android:required="false"/>
         <uses-library android:name="com.mediatek.ims.plugin" android:required="false"/>
-        <uses-library android:name="mediatek-common" android:required="true"/>
         <uses-library android:name="mediatek-ims-base" android:required="true"/>
         <uses-library android:name="mediatek-ims-common" android:required="true"/>
         <uses-library android:name="mediatek-telephony-common" android:required="true"/>
