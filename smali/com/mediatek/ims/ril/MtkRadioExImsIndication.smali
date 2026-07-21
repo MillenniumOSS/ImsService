@@ -10,14 +10,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$dGNQvDgxJY8W1R7RurWqeQUxwyU(Lcom/mediatek/ims/ril/MtkRadioExImsIndication;[I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->lambda$notifyNtTelephonyEregrtInfoInd$0([I)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Lcom/mediatek/ims/ril/ImsRILAdapter;I)V
     .locals 0
     .param p1, "ril"    # Lcom/mediatek/ims/ril/ImsRILAdapter;
@@ -33,113 +25,6 @@
     iput p2, p0, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->mPhoneId:I
 
     .line 76
-    return-void
-.end method
-
-.method private synthetic lambda$notifyNtTelephonyEregrtInfoInd$0([I)V
-    .locals 5
-    .param p1, "info"    # [I
-
-    .line 593
-    nop
-
-    .line 594
-    const-string v0, "nothing.radio.ntphone"
-
-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v0
-
-    .line 593
-    invoke-static {v0}, Lcom/nothing/telephony/INothingTelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/nothing/telephony/INothingTelephony;
-
-    move-result-object v0
-
-    .line 595
-    .local v0, "ntTelephony":Lcom/nothing/telephony/INothingTelephony;
-    if-eqz v0, :cond_0
-
-    .line 596
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    .line 597
-    .local v1, "bundleRequest":Landroid/os/Bundle;
-    const-string v2, "phoneId"
-
-    iget v3, p0, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->mPhoneId:I
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 598
-    const-string v2, "info"
-
-    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
-
-    .line 600
-    :try_start_0
-    const-string v2, "notifyERegRT"
-
-    invoke-interface {v0, v2, v1}, Lcom/nothing/telephony/INothingTelephony;->generalSetter(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 603
-    goto :goto_0
-
-    .line 601
-    :catch_0
-    move-exception v2
-
-    .line 602
-    .local v2, "e":Landroid/os/RemoteException;
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Exception for notifyERegRT, "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "MtkRadioExImsIndication"
-
-    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 605
-    .end local v1    # "bundleRequest":Landroid/os/Bundle;
-    .end local v2    # "e":Landroid/os/RemoteException;
-    :cond_0
-    :goto_0
-    return-void
-.end method
-
-.method private notifyNtTelephonyEregrtInfoInd([I)V
-    .locals 2
-    .param p1, "info"    # [I
-
-    .line 592
-    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/mediatek/ims/ril/MtkRadioExImsIndication$$ExternalSyntheticLambda0;
-
-    invoke-direct {v1, p0, p1}, Lcom/mediatek/ims/ril/MtkRadioExImsIndication$$ExternalSyntheticLambda0;-><init>(Lcom/mediatek/ims/ril/MtkRadioExImsIndication;[I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 606
     return-void
 .end method
 
@@ -634,9 +519,6 @@
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1}, Lcom/mediatek/ims/ril/ImsRILAdapter;->processMtkIndication(II)V
-
-    .line 563
-    invoke-direct {p0, p2}, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->notifyNtTelephonyEregrtInfoInd([I)V
 
     .line 567
     new-instance v0, Ljava/lang/StringBuilder;
